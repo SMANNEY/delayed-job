@@ -1,4 +1,8 @@
-delayed_job supports multiple backends. Here are links to the repositories for those backends.
+delayed_job allows you to use whatever data store you want for the job queue. Here are the current backends:
 
 * "DataMapper":http://github.com/collectiveidea/delayed_job_data_mapper
 * "Mongoid":http://github.com/collectiveidea/delayed_job_mongoid
+
+h2. Implementing a new backend
+
+It's really easy to make delayed_job work with your preferred data store. Just copy one of the existing ones, and implement @Delayed::Backend::[YourBackendName]::Job@.
