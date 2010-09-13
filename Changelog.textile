@@ -1,4 +1,4 @@
-h1. 1.8.5
+h2. 1.8.5 - 2010-03-15
 
 * Set auto_flushing=true on Rails logger to fix logging in production
 * Fix error message when trying to send_later on a method that doesn't exist
