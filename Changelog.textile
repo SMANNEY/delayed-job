@@ -1,12 +1,14 @@
 h2. 2.0.0 - 2010-04-03
-* Multiple backend support (added MongoMapper and DataMapper). See README for more details.
+* Multiple backend support (See README for more details)
+* Added MongoMapper backend [zbelzer, moneypools]
+* Added DataMapper backend [lpetre]
 * Reverse priority so the jobs table can be indexed. Lower numbers have higher priority. The default priority is 0, so increase it for jobs that are not important.
-* Move most of the heavy lifting from Job to Worker (#work_off, #reschedule, #run, #min_priority, #max_priority, #max_run_time, #max_attempts, #worker_name)
+* Move most of the heavy lifting from Job to Worker (#work_off, #reschedule, #run, #min_priority, #max_priority, #max_run_time, #max_attempts, #worker_name) [albus522]
 * Remove EvaledJob. Implement your own if you need this functionality.
 * Only use Time.zone if it is set. Closes #20
 * Fix for last_error recording when destroy_failed_jobs = false, max_attempts = 1
 * Implemented worker name_prefix to maintain dynamic nature of pid detection
-* Some Rails 3 compatibility fixes
+* Some Rails 3 compatibility fixes [fredwu]
 
 h2. 1.8.5 - 2010-03-15
 
