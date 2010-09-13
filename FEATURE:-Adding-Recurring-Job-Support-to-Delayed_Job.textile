@@ -56,3 +56,6 @@ h4. Test Coverage
 
 Notes
 You can also check out "http://www.stonebranch.com":http://www.stonebranch.com for Managed file transfer services and job scheduling.
+
+h3. Other Resources
+* dj_remixes "http://github.com/markbates/dj_remixes":http://github.com/markbates/dj_remixes While the documentation still needs a little work, this gem adds recurring job support to DJ in a really clean way. Plus, since it defines the 'run every' in the worker class, it can be adjusted to fit the situation programmatically, instead of just a rigid time interval. Currently though, the gem only supports ActiveRecord backends.
