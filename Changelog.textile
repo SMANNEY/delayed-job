@@ -1,9 +1,9 @@
 h2. 2.0.2 - 2010-04-08
 
-* Fixes to Mongo Mapper adapter ["14be7a24":http://github.com/collectiveidea/delayed_job/commit/14be7a24, "dafd5f46":http://github.com/collectiveidea/delayed_job/commit/dafd5f46, "54d40913":http://github.com/collectiveidea/delayed_job/commit/54d40913]
-* Fixed Delayed::Command to create tmp/pids directory ["8ec8ca41":http://github.com/collectiveidea/delayed_job/commit/8ec8ca41]
-* Railtie to perform Rails 3 initialization ["3e0fc41f":http://github.com/collectiveidea/delayed_job/commit/3e0fc41f]
-* DM performance improvements ["93833cce":http://github.com/collectiveidea/delayed_job/commit/93833cce, "e9b1573e":http://github.com/collectiveidea/delayed_job/commit/e9b1573e, "37a16d11":http://github.com/collectiveidea/delayed_job/commit/37a16d11, "803f2bfa":http://github.com/collectiveidea/delayed_job/commit/803f2bfa]
+* Fixes to Mongo Mapper adapter [ "14be7a24":http://github.com/collectiveidea/delayed_job/commit/14be7a24, "dafd5f46":http://github.com/collectiveidea/delayed_job/commit/dafd5f46, "54d40913":http://github.com/collectiveidea/delayed_job/commit/54d40913 ]
+* Fixed Delayed::Command to create tmp/pids directory [ "8ec8ca41":http://github.com/collectiveidea/delayed_job/commit/8ec8ca41 ]
+* Railtie to perform Rails 3 initialization [ "3e0fc41f":http://github.com/collectiveidea/delayed_job/commit/3e0fc41f ]
+* DM performance improvements [ "93833cce":http://github.com/collectiveidea/delayed_job/commit/93833cce, "e9b1573e":http://github.com/collectiveidea/delayed_job/commit/e9b1573e, "37a16d11":http://github.com/collectiveidea/delayed_job/commit/37a16d11, "803f2bfa":http://github.com/collectiveidea/delayed_job/commit/803f2bfa ]
 * Added on_permanent_failure hook [ "d2f14cd6":http://github.com/collectiveidea/delayed_job/commit/d2f14cd6 ]
 
 h2. 2.0.1 - 2010-04-03
