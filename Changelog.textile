@@ -21,4 +21,4 @@ h2. 1.8.5 - 2010-03-15
 * Delayed job should append to delayed_job.log not overwrite
 * Version bump to 1.8.5
 * fixing Time.now to be Time.zone.now if set to honor the app set local TimeZone
-* Replaced @Worker::SLEEP@, @Job::MAX_ATTEMTPTS@, and @Job::MAX_RUN_TIME@ with class methods that can be overridden.
+* Replaced @Worker::SLEEP@, @Job::MAX_ATTEMPTS@, and @Job::MAX_RUN_TIME@ with class methods that can be overridden.
