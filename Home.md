@@ -1,1 +1,0 @@
-Welcome to the delayed_job wiki!
