@@ -1,0 +1,34 @@
+* Brandon Keepers
+* Tobias Lütke
+* David Genord II
+* Rob Ares
+* Luke Petre
+* rick
+* Zachary Belzer
+* Chris Wanstrath
+* aurels
+* Justin Knowlden
+* Fred Wu
+* Dean Strelau
+* Tobias Luetke (home)
+* Tim Matheson
+* Luke Melia
+* John Barnette
+* Joel Chippindale
+* Elijah Miller
+* Dan DeMaggio
+* laserlemon
+* beat
+* Willem van Bergen
+* Vladimir Andrijevik
+* Ted Kulp
+* Robert Beekman
+* Patrick McKenzie
+* Oleg Shaldybin
+* Gabriel Gironda
+* Eric Lindvall
+* David Heinemeier Hansson
+* Brendan Schwartz
+* Ben Marini
+* Barnaby Gray
+* Andres Rodriguez
