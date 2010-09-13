@@ -11,6 +11,10 @@ options:
 <pre>options = {:priority => 19, :run_at => 5.minutes.from_now}
 UserMailer.delay(options).deliver_confirmation(@user)</pre>
 
+h2. 2.0.3 - 2010-04-15
+
+* Fix initialization for Rails 2.x
+
 h2. 2.0.2 - 2010-04-08
 
 * Fixes to Mongo Mapper backend [ "14be7a24":http://github.com/collectiveidea/delayed_job/commit/14be7a24, "dafd5f46":http://github.com/collectiveidea/delayed_job/commit/dafd5f46, "54d40913":http://github.com/collectiveidea/delayed_job/commit/54d40913 ]
