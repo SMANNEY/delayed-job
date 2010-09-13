@@ -27,15 +27,11 @@ h3. (Proposed)Design
 
 h4. Four Primary Use Cases for API
 
-h5. Run single job right now
-
-h5. Run single job at specific time in the future
-
-h5. Schedule recurring job beginning first run immediately
-
-h5. Schedule recurring job beginning first run at specific time in the future
-
-h5. More variations?? 
+  * Run single job right now
+  * Run single job at specific time in the future
+  * Schedule recurring job beginning first run immediately
+  * Schedule recurring job beginning first run at specific time in the future
+  * More variations?? 
 
 h4. Add :run_every to migrations.
 
