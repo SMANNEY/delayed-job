@@ -1,3 +1,6 @@
+h2. 2.0.1 - 2010-04-03
+* Bug fix for using ActiveRecord backend with daemon [martinbtt]
+
 h2. 2.0.0 - 2010-04-03
 * Multiple backend support (See README for more details)
 * Added MongoMapper backend [zbelzer, moneypools]
