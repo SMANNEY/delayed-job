@@ -50,6 +50,9 @@ h4. Raise exception if attempt to enqueue a redundant recurring job
 Notes
 
 h4. Test Coverage
+* Successful job requeues
+* Unsuccessful job doesn't requeue
+* Failed job (after N attempts) does requeue
 
 Notes
 You can also check out "http://www.stonebranch.com":http://www.stonebranch.com for Managed file transfer services and job scheduling.
