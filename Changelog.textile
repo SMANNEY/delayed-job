@@ -11,7 +11,7 @@ options:
 <pre>options = {:priority => 19, :run_at => 5.minutes.from_now}
 UserMailer.delay(options).deliver_confirmation(@user)</pre>
 
-h2. 2.0.3 - 2010-04-15
+h2. 2.0.3 - 2010-04-16
 
 * Fix initialization for Rails 2.x
 
