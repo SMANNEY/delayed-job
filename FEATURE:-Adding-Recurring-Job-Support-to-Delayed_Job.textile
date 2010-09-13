@@ -31,6 +31,11 @@ Any job that has a non-nil :run_every entry is by default a recurring job.  :run
   :run_at => Time(8.AM), :run_every => 1.day
 on execution, would ensure that the next run_at time is set for 8AM the next day, not 8AM+job_execution_time - that would be considered drift
 
-h4. Raise exception if attempt to enqueue a redundant recurring job
 
 h4. Implement recurring functionality as a Mixin/Extension, so code can be clearly delinated from the mainline delayed_job code
+
+
+h4. Raise exception if attempt to enqueue a redundant recurring job
+
+
+h4. Test Coverage
