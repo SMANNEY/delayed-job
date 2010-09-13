@@ -5,14 +5,15 @@ Delayed_job provides and ideal platform for providing support for distributed jo
 
 
 h4. CRON SPOF (Single Point of Failure)
+
 While I'm sure some cron hackers have solved this problem in a variety of ways, it's a non trivial challenge to ensure that regular, scheduled jobs in a redundant cluster run only once (on schedule), and still run if the cron server(s) is down.  Recurring job support in delayed_job can solve both of these issues (redundancy and Singleton execution) in clustered environments cleanly.
 
 Other distributed scheduling implementations
-  * Quartz Scheduler (Java): http://www.quartz-scheduler.org/
+  * Quartz Scheduler (Java): "http://www.quartz-scheduler.org/":http://www.quartz-scheduler.org/
 
 There are at least two forks that add recurring job scheduling to delayed_job:
-  * http://github.com/briandemant/delayed_job 
-  * http://github.com/terrbear/delayed_job
+  * "http://github.com/briandemant/delayed_job":http://github.com/briandemant/delayed_job 
+  * "http://github.com/terrbear/delayed_job":http://github.com/terrbear/delayed_job
 
 
 h3. Requirements: 
