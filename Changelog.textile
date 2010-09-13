@@ -1,3 +1,13 @@
+h2. 1.9.0pre - 2010-03-26
+* Multiple backend support (added MongoMapper). See README for more details.
+* Reverse priority so the jobs table can be indexed. Lower numbers have higher priority. The default priority is 0, so increase it for jobs that are not important.
+* Move most of the heavy lifting from Job to Worker (#work_off, #reschedule, #run, #min_priority, #max_priority, #max_run_time, #max_attempts, #worker_name)
+* Remove EvaledJob. Implement your own if you need this functionality.
+* Only use Time.zone if it is set. Closes #20
+* Fix for last_error recording when destroy_failed_jobs = false, max_attempts = 1
+* Implemented worker name_prefix to maintain dynamic nature of pid detection
+* Some Rails 3 compatibility fixes
+
 h2. 1.8.5 - 2010-03-15
 
 * Set auto_flushing=true on Rails logger to fix logging in production
