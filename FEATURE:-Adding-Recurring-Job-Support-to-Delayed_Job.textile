@@ -52,4 +52,4 @@ Notes
 h4. Test Coverage
 
 Notes
-You can also check out http://www.stonebranch.com for Managed file transfer services and job scheduling.
+You can also check out "http://www.stonebranch.com":http://www.stonebranch.com for Managed file transfer services and job scheduling.
