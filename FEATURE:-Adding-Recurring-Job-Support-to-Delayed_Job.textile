@@ -1,0 +1,35 @@
+Delayed_job provides and ideal platform for providing support for distributed job scheduling, however it currently lacks a way for repeat or recurring jobs to run.  Adding support for recurring jobs will provide developers with several benefits:
+  * Move 'cron' type operational configs into application code
+  * Ensure redundancy by  allowing recurring jobs to run anywhere workers are running
+  * Ensure recurring jobs don't run in multiple locations simultaneously (overlap)
+
+
+h4. CRON SPOF (Single Point of Failure)
+While I'm sure some cron hackers have solved this problem in a variety of ways, it's a non trivial challenge to ensure that regular, scheduled jobs in a redundant cluster run only once (on schedule), and still run if the cron server(s) is down.  Recurring job support in delayed_job can solve both of these issues (redundancy and Singleton execution) in clustered environments cleanly.
+
+Other distributed scheduling implementations
+  * Quartz Scheduler (Java): http://www.quartz-scheduler.org/
+
+There are at least two forks that add recurring job scheduling to delayed_job:
+  * http://github.com/briandemant/delayed_job 
+  * http://github.com/terrbear/delayed_job
+
+
+h3. Requirements: 
+  * easy to understand API for usage
+  * continued support for run_at semantics
+  * addition of recurring semantics: 5.minutes, 1.day, 1.week, etc.
+  * ability to ensure that a set of scheduled, recurring jobs are properly configured and running in the queue
+  * error handling and recovery, compatible with the delayed_job design
+
+h3. (Proposed)Design
+
+h4. Add :run_every to migrations.
+
+Any job that has a non-nil :run_every entry is by default a recurring job.  :run_every should be applied when jobs are run to ensure there is no time drift.  For example:
+  :run_at => Time(8.AM), :run_every => 1.day
+on execution, would ensure that the next run_at time is set for 8AM the next day, not 8AM+job_execution_time - that would be considered drift
+
+h4. Raise exception if attempt to enqueue a redundant recurring job
+
+h4. Implement recurring functionality as a Mixin/Extension, so code can be clearly delinated from the mainline delayed_job code
