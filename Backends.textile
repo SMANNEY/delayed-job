@@ -1,0 +1,4 @@
+delayed_job supports multiple backends. Here are links to the repositories for those backends.
+
+* "DataMapper":http://github.com/collectiveidea/delayed_job_data_mapper
+* "Mongoid":http://github.com/collectiveidea/delayed_job_mongoid
