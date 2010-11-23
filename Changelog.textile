@@ -1,4 +1,4 @@
-2.1.1 - 2010-11-14
+h2. 2.1.1 - 2010-11-14
 * Fix issue with worker name not getting properly set when locking a job
 * Fixes for YAML serialization
 
