@@ -1,15 +1,6 @@
-h2. 2.1 - unreleased
-
-* Option to start a monitor process
-* Added CouchDB backend
-* Normalize logging messages 
-* New pure-YAML serialization
-* Added Rails 3 generator
-* Deprecated @#send_later@ and @#send_at@
-* Added @#delay@ to Object that allows you to delay any method and pass 
-options:
-<pre>options = {:priority => 19, :run_at => 5.minutes.from_now}
-UserMailer.delay(options).deliver_confirmation(@user)</pre>
+2.1.1 - 2010-11-14
+* Fix issue with worker name not getting properly set when locking a job
+* Fixes for YAML serialization
 
 h2. 2.1.0 - 2010-11-14
 * Added enqueue, before, after, success, error, and failure. See the README
