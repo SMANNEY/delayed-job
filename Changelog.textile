@@ -11,6 +11,16 @@ options:
 <pre>options = {:priority => 19, :run_at => 5.minutes.from_now}
 UserMailer.delay(options).deliver_confirmation(@user)</pre>
 
+h2. 2.1.0 - 2010-11-14
+* Added enqueue, before, after, success, error, and failure. See the README
+* Remove Merb support
+* Remove all non Active Record backends into separate gems. See https://github.com/collectiveidea/delayed_job/wiki/Backends
+* remove rails 2 support. delayed_job 2.1 will only support Rails 3
+* New pure-YAML serialization
+* Added Rails 3 railtie and generator
+* Changed @@sleep_delay to self.class.sleep_delay to be consistent with other class variable usage
+* Added --sleep-delay command line option
+
 h2. 2.0.4 - 2010-11-14
 
 * Fix issue where dirty tracking prevented job from being properly unlocked
