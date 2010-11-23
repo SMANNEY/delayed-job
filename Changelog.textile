@@ -11,6 +11,21 @@ options:
 <pre>options = {:priority => 19, :run_at => 5.minutes.from_now}
 UserMailer.delay(options).deliver_confirmation(@user)</pre>
 
+h2. 2.0.4 - 2010-11-14
+
+* Fix issue where dirty tracking prevented job from being properly unlocked
+* Add delayed_job_args variable for Capistrano recipe to allow configuration of started workers (e.g. "-n 2 --max-priority 10")
+* Added options to handle_asynchronously
+* Added Delayed::Worker.default_priority
+* Allow private methods to be delayed
+* Fixes for Ruby 1.9
+* Added -m command line option to start a monitor process
+* normalize logging in worker
+* Deprecate #send_later and #send_at in favor of new #delay method
+* Added @#delay@ to Object that allows you to delay any method and pass options:
+<pre>options = {:priority => 19, :run_at => 5.minutes.from_now}
+UserMailer.delay(options).deliver_confirmation(@user)</pre>
+
 h2. 2.0.3 - 2010-04-16
 
 * Fix initialization for Rails 2.x
