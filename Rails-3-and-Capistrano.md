@@ -1,3 +1,11 @@
+### Note: Create the script
+
+If DJ is installed as a gem don't forget to run the generator. It creates the script/delayed_job script and sets run permissions.
+
+    script/rails g delayed_job
+
+### Capistrano
+
 delayed_job comes with Capistrano recipes to start the script/delayed_job worker but you have to update your config/deploy.rb file to use them. There are 3 changes that need to be made:
 
 ### Include the recipes  
