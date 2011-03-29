@@ -1,0 +1,5 @@
+There is some discussion about the fork model of delayed_job.
+
+See :
+* http://groups.google.com/group/delayed_job/browse_thread/thread/e3f1ab43a44c534c/8cdd1afbfbe7520d
+* http://groups.google.com/group/delayed_job/browse_thread/thread/cfcc103985705322/211d379896865cfd
