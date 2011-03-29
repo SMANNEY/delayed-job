@@ -1,0 +1,4 @@
+The delayed_job README file is a good first source of infos.
+
+* [[delayed_job command details]]
+* [[auto-scaling]]
