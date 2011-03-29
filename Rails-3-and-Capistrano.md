@@ -2,7 +2,7 @@
 
 If DJ is installed as a gem don't forget to run the generator. It creates the script/delayed_job script and sets run permissions.
 
-    script/rails g delayed_job
+    rails generate delayed_job
 
 ### Capistrano
 
