@@ -1,4 +1,9 @@
 The delayed_job README file is a good first source of infos.
 
 * [[delayed job command details]]
+
+===Proposals===
+
 * [[auto scaling]]
+* [[named queues]]
+
