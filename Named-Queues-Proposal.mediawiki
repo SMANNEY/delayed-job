@@ -1,0 +1,40 @@
+===Purpose===
+Add Resque-style named queues while retaining DJ-style priority. Named queues provide a convenient system for grouping tasks to be worked by separate pools of workers, which may be scaled and controlled individually.
+
+Named queues should be:
+* arbitrarily named and created on-the-fly (just put a job in a queue and that queue exists)
+* ignored by default (Workers should pull from all queues unless told not to for backwards compatibility)
+* efficient (Backends must properly index so that queues are efficient even when large)
+* ignorant of the priority and delaying system. Priority and run_at should continue to function as before when jobs are segmented by queue.
+
+===API Changes===
+Old ways still work:
+object.delay.method or Delayed::Job.enqueue job
+
+Assigning to a queue:
+object.delay(:queue => 'tracking').method
+Delayed::Job.enqueue job, :queue => 'tracking'
+
+===Commandline Changes===
+If no queue option is specified, workers will work all queues. More than one queue may be specified to a worker. Both singular and plural queue option names are provided for convenience and are interchangeable.
+
+rake:
+
+  QUEUE=tracking rake jobs:run
+  QUEUES=one,two rake jobs:run
+
+daemon:
+
+  delayed_job --queue=tracking start
+  delayed_job --queues=tracking,two start
+
+===Schema Change===
+New column: queue (string, nullable)
+Change index: add queue to existing priority,run_at index
+
+TODO:
+* determine if queue field should come at the start or end of the index
+* determine if it's more efficient to make queue not-null and use a default queue name
+
+===Target Release===
+Since there is both a schema change for the AR backend and implementation changes for all backends to coordinate, this feature should be targeted for the next minor-version release of DJ (2.2). The upgrade process from 2.0 and 2.1 should be documented and a generator provided for the AR schema migration.
