@@ -47,3 +47,5 @@ Since there is both a schema change for the AR backend and implementation change
 * temporarily disable processing of a class of jobs (due to load, debugging, etc)
 * only run certain jobs in bursts when there is excess capacity (batch)
 * allow a normally low priority job to have a higher-priority instance (to "catchup" a missed job, etc)
+
+(Zach M.) My opinion is that when I get to this granular of control, I need to move to Resque. I love that DJ is a simple "I want to add background processing to my app". When I exceed that and need to manage workers and queues, I feel like I need to use Resque instead. I'm not saying DJ is unsuitable for named queues, but it seems like when you start using named queues other existing projects will be a better fit.
