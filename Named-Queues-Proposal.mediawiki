@@ -49,3 +49,5 @@ Since there is both a schema change for the AR backend and implementation change
 * allow a normally low priority job to have a higher-priority instance (to "catchup" a missed job, etc)
 
 (Zach M.) My opinion is that when I get to this granular of control, I need to move to Resque. I love that DJ is a simple "I want to add background processing to my app". When I exceed that and need to manage workers and queues, I feel like I need to use Resque instead. I'm not saying DJ is unsuitable for named queues, but it seems like when you start using named queues other existing projects will be a better fit.
+
+(Mark G) While Resque may be a better option in some cases, I don't see that as a reason against additional job filtering capabilities in Delayed Job.  There are other factors that may lead someone to want to continue to use Delayed Job (e.g., not wanting to introduce Redis into the mix), and still have legitimate uses for "named queues".  I also agree with Matt G; priority and purpose are complimentary but orthogonal.
