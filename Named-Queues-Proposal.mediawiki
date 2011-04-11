@@ -36,7 +36,7 @@ Since there is both a schema change for the AR backend and implementation change
 
 === Comments ===
 John H: 
-  What is the goal you're trying to accomplish here?  I'm guessing to separate long-running and short-running jobs so that long-running (or error-prone) classes of jobs don't bottleneck short-running jobs that you might want to be more responsive.  What about being able to specify a min-priority on workers?  Would that let you accomplish what you're after?  To illustrate:
+What is the goal you're trying to accomplish here?  I'm guessing to separate long-running and short-running jobs so that long-running (or error-prone) classes of jobs don't bottleneck short-running jobs that you might want to be more responsive.  What about being able to specify a min-priority on workers?  Would that let you accomplish what you're after?  To illustrate:
 * create 2 workers
 * set one workers min priority to 50
 * set short-running/responsive jobs to have higher priority than slow or long-running jobs
