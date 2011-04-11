@@ -5,5 +5,5 @@ The delayed_job README file is a good first source of infos.
 ===Proposals===
 
 * [[auto scaling]]
-* [[named queues]]
+* [[named queues proposal]]
 
