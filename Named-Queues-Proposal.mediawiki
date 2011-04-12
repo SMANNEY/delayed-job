@@ -52,3 +52,6 @@ Since there is both a schema change for the AR backend and implementation change
 
 
 (Matt G.) I get the argument for not complicating DJ. The "just add backgrounding" use case should always be dirt simple and I don't feel this proposal impacts that case. I worry that "just use Resque" is going to be used as an argument any time we steal a convenient feature. Resque is awesome but it's misleading to assume that anyone with queue needs that are more complicated than average wants to add Redis to their infrastructure.
+
+
+(Josh G.) Does this allow prioritizing of one queue over another?  (Matt G.) No. Specifying queues for a worker filters jobs, setting priority controls the order they are processed.
