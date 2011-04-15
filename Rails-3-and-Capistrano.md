@@ -13,11 +13,13 @@ delayed_job comes with Capistrano recipes to start the script/delayed_job worker
     require "delayed/recipes"  
 
 ### The recipes use the :rails_env variable to pass the environment to script/delayed_job.   
-     set :rails_env, "production" #added for delayed job  
+    set :rails_env, "production" #added for delayed job  
 
 ### Hook into Capistrano to start, stop and restart  
 
     # Delayed Job  
-    after "deploy:stop",    "delayed_job:stop"  
-    after "deploy:start",   "delayed_job:start"  
-    after "deploy:restart", "delayed_job:restart"  
+    before "deploy:restart", "delayed_job:stop"
+    after  "deploy:restart", "delayed_job:start"
+
+    after "deploy:stop",  "delayed_job:stop"
+    after "deploy:start", "delayed_job:start"
