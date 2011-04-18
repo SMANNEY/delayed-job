@@ -5,7 +5,7 @@ DJ 2.1 introduced a callback mechanism, allowing jobs to receive notifications a
 Global hooks would simplify most callback use cases and allow straightforward integration of third-party tools (Hoptoad, stats tracking, etc) while still providing custom behavior on a per-job basis.
 
 ### Configuration
-Global hooks are configured at the worker level using a block which receives the job.
+Global hooks are configured at the worker level using a block which receives the job. _(I want them to be defined on Delayed::Job but the backend isn't likely to be set up by the time third-party plugins would need to be hooked up. Anyone have ideas?)_
 
 `Delayed::Worker.hook :name, lambda {|job| ... }`
 
