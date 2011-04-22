@@ -18,8 +18,8 @@ Assigning to a queue:
 If no queue option is specified, workers will work all queues. More than one queue may be specified to a worker. Both singular and plural queue option names are provided for convenience and are interchangeable.
 
 rake:
-  QUEUE=tracking rake jobs:run
-  QUEUES=one,two rake jobs:run
+  QUEUE=tracking rake jobs:work
+  QUEUES=one,two rake jobs:work
 daemon:
   delayed_job --queue=tracking start
   delayed_job --queues=tracking,two start
