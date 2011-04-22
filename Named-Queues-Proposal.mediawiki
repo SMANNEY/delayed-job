@@ -55,3 +55,6 @@ Since there is both a schema change for the AR backend and implementation change
 
 
 (Josh G.) Does this allow prioritizing of one queue over another?  (Matt G.) No. Specifying queues for a worker filters jobs, setting priority controls the order they are processed.
+
+
+(Eric A.) I could see named queues being useful for my environment. Jumping to Resque is non-trivial when one considers transactional integrity. DJ can run on the same db, Resque will run on a second datastore introducing XA style transaction problems that I rather not tackle.
