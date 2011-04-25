@@ -11,9 +11,12 @@ Named queues should be:
 Old ways still work:
   object.delay.method
   Delayed::Job.enqueue job
+  handle_asynchronously :send_mailer
 Assigning to a queue:
   object.delay(:queue => 'tracking').method
   Delayed::Job.enqueue job, :queue => 'tracking'
+  handle_asynchronously :send_mailer, :queue => 'mailers'
+
 ===Commandline Changes===
 If no queue option is specified, workers will work all queues. More than one queue may be specified to a worker. Both singular and plural queue option names are provided for convenience and are interchangeable.
 
