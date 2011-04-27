@@ -35,7 +35,10 @@ TODO:
 * determine if it's more efficient to make queue not-null and use a default queue name
 
 ===Target Release===
-Since there is both a schema change for the AR backend and implementation changes for all backends to coordinate, this feature should be targeted for the next minor-version release of DJ (2.2). The upgrade process from 2.0 and 2.1 should be documented and a generator provided for the AR schema migration.
+Since there is both a schema change for the AR backend and implementation changes for all backends to coordinate, this feature should be targeted for the next major release of DJ (3.0). The upgrade process from 2.0 and 2.1 should be documented and a generator provided for the AR schema migration.
+
+===Working Branch===
+[https://github.com/collectiveidea/delayed_job/tree/feature/named-queues]
 
 === Comments/Questions ===
 
