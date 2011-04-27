@@ -61,3 +61,5 @@ Since there is both a schema change for the AR backend and implementation change
 
 
 (Eric A.) I could see named queues being useful for my environment. Jumping to Resque is non-trivial when one considers transactional integrity. DJ can run on the same db, Resque will run on a second datastore introducing XA style transaction problems that I'd rather not tackle.
+
+(Jared M.) I second this proposal. I would love some filtering by queue type. I was thinking of making this proposal this morning (but I was thinking of introducing "tags", and having workers filter on one or many tags. I think I like Matt's approach better).  I'm volunteering to work on this if the proposal is accepted. 
