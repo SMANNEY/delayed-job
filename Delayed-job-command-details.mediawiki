@@ -12,7 +12,7 @@ Here is the command line detailed help :
  --sleep-delay N : Amount of time to sleep when no jobs are found
  -p, --prefix NAME : String to be prefixed to worker process names
 
-Exemple :
+Example :
  # Runs two workers in separate processes.
  RAILS_ENV=production script/delayed_job -n 2 start
  RAILS_ENV=production script/delayed_job stop
