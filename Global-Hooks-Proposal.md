@@ -23,3 +23,7 @@ Global hooks have the same names as the callback methods on the job class (befor
 ### Questions
 * Should global hooks be cancelable by returning false from a job hook?
 * Should global hook blocks in the chain be allowed to cancel execution like rails filter chains?
+
+### Comments
+
+(Stephen V.T.) Implement named queues and allow global hooks to be applied to the queue. Then this would allow 3 levels of hooks: Individual job hooks, queue hooks and global hooks (applies to all queues).
