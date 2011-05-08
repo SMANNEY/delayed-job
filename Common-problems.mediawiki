@@ -1,0 +1,17 @@
+== nothing happens ==
+
+# Does your database includes the "delayed_job" table ? If not, go through installation instructions again.
+# Start your app with no workers and check if jobs are added in the database. If not, see "No jobs are added in the database"
+# If jobs are present, then launch manually one worker : "rake jobs". Jobs should be processed and disappear from the database.
+## If jobs are still here, do they show an error ? If yes, see "jobs show an error".
+## If jobs are no longer in the database, they were processed. See log/delayed_job
+
+== No jobs are added in the database ==
+Assuming the delayed_job table is here, try to inspect the logs (log/developpement.log). Do you use protection against mass assignment ? If yes, you should relax the rules for two fields :
+ ActiveRecord::Base.send(:attr_accessible, :priority)
+ ActiveRecord::Base.send(:attr_accessible, :payload_object)
+Just like you probably did for the sessions, cf. http://railsforum.com/viewtopic.php?id=32634
+
+== jobs signal a processing error ==
+=== undefined method `test_email' for <nowiki>#<Class:0xb3c7700></nowiki> ===
+I'm on this one. Will update as soon as I have the answer ;-)
