@@ -12,6 +12,19 @@ Assuming the delayed_job table is here, try to inspect the logs (log/developpeme
  ActiveRecord::Base.send(:attr_accessible, :payload_object)
 Just like you probably did for the sessions, cf. http://railsforum.com/viewtopic.php?id=32634
 
-== jobs signal a processing error ==
-=== undefined method `test_email' for <nowiki>#<Class:0xb3c7700></nowiki> ===
-I'm on this one. Will update as soon as I have the answer ;-)
+== jobs show an error ==
+=== undefined method 'xxx' for class... ===
+First just check if the given class has the method (never know !)
+Then, look closely at the 'handler' field of the job. It should be something like that (action mailer example)
+ --- !ruby/struct:Delayed::PerformableMailer 
+ object: !ruby/class TestMailer
+ method_name: :test_email
+ args: 
+ - xxx@gmail.com
+And NOT like that :
+ --- !ruby/struct:Delayed::PerformableMailer 
+ object: !ruby/object:Class TestMailer
+ method_name: :test_email
+ args: 
+ - xxx@gmail.com
+See the difference ? The second one happen when you use the 'thin' server instead of the classic mongrel ('rails server'). I don't know why. For now, the solution is to use 'rails server'.
