@@ -28,11 +28,11 @@ daemon:
   delayed_job --queues=tracking,two start
 ===Schema Change===
 New column: queue (string, nullable)
-Change index: add queue to end of existing priority,run_at index
+Change index: add queue to existing priority,run_at index
 
 TODO:
+* determine if queue field should come at the start or end of the index
 * determine if it's more efficient to make queue not-null and use a default queue name
-* investigate necessary changes to Mongoid, DM backends
 
 ===Target Release===
 Since there is both a schema change for the AR backend and implementation changes for all backends to coordinate, this feature should be targeted for the next major release of DJ (3.0). The upgrade process from 2.0 and 2.1 should be documented and a generator provided for the AR schema migration.
