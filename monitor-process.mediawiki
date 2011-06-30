@@ -1,3 +1,15 @@
 Q: There is a command line option for a "monitor process". What is that?
 
 A: It passes `true` for `:monitor` to this method: http://daemons.rubyforge.org/classes/Daemons.html#M000004
+
+Also, delayed_job can be easily monitored with monit:
+
+<pre>
+check process delayed_job with pidfile /var/www/current/tmp/pids/delayed_job.pid
+        start program = "/var/www/current/script/delayed_job -e production start" as uid ubuntu and gid ubuntu
+        stop program = "/var/www/current/script/delayed_job -e production stop" as uid ubuntu and gid ubuntu
+        if mem is greater than 300.0 MB for 1 cycles then restart
+        if cpu is greater than 50% for 2 cycles then alert
+        if cpu is greater than 80% for 3 cycles then restart
+        group background
+</pre>
