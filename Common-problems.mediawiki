@@ -27,7 +27,9 @@ And NOT like that :
  method_name: :test_email
  args: 
  - xxx@gmail.com
-See the difference ? The second one happen when you use the 'thin' server instead of the classic mongrel ('rails server'). I don't know why. For now, the solution is to use 'rails server'.
+See the difference ? The second one happens when you use the 'thin' server instead of the classic mongrel ('rails server'). I don't know why. For now, the solution is to use 'rails server' instead of 'thin'.
+
+It can also happen when using the standard Passenger/RVM setup_load_paths.rb as detailed on the RVM setup pages: https://rvm.beginrescueend.com/integration/passenger/ To solve this, simply delete that file.
 
 == Sending emails with attachments ==
 According to the official Rails guides http://guides.rubyonrails.org/action_mailer_basics.html#adding-attachments, the mail gem will automatically guess the mime_type and set the encoding for emails with attachments. This does not work when the email is delivered asynchronously using delayed_job, and the email will be sent without the attachments.
