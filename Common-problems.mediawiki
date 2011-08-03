@@ -1,5 +1,6 @@
 == nothing happens ==
 
+# If delayed_job appears to start but the process isn't running, check that  <code>log/delayed_job.log</code>  is writeable.
 # Does your database includes the "delayed_job" table ? If not, go through installation instructions again.
 # Start your app with no workers and check if jobs are added in the database. If not, see "No jobs are added in the database"
 # If jobs are present, then launch manually one worker : "rake jobs". Jobs should be processed and disappear from the database.
