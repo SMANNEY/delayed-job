@@ -5,10 +5,11 @@
 # Start your app with no workers and check if jobs are added in the database. If not, see "No jobs are added in the database"
 # If jobs are present, then launch manually one worker : "rake jobs". Jobs should be processed and disappear from the database.
 ## If jobs are still here, do they show an error ? If yes, see "jobs show an error".
-## If jobs are no longer in the database, they were processed. See log/delayed_job
+## If jobs are no longer in the database, see log/delayed_job
+## If jobs have been removed from the database with no reported error, see "jobs are silently removed from the database"
 
 == No jobs are added in the database ==
-Assuming the delayed_job table is here, try to inspect the logs (log/developpement.log). Do you use protection against mass assignment ? If yes, you should relax the rules for two fields :
+Assuming the delayed_job table is here, try to inspect the logs (log/developement.log). Do you use protection against mass assignment ? If yes, you should relax the rules for two fields :
  ActiveRecord::Base.send(:attr_accessible, :priority)
  ActiveRecord::Base.send(:attr_accessible, :payload_object)
 Just like you probably did for the sessions, cf. http://railsforum.com/viewtopic.php?id=32634
@@ -31,6 +32,13 @@ And NOT like that :
 See the difference ? The second one happens when you use the 'thin' server instead of the classic mongrel ('rails server'). I don't know why. For now, the solution is to use 'rails server' instead of 'thin'.
 
 It can also happen when using the standard Passenger/RVM setup_load_paths.rb as detailed on the RVM setup pages: https://rvm.beginrescueend.com/integration/passenger/ To solve this, simply delete that file.
+
+== jobs are silently removed from the database ==
+
+If the delayed_job worker cannot process the YAML code in the 'handler' field, it will silently remove the job from the job table.  One common cause is that the YAML references a class not known to the worker.  If this is the case, you can add 
+    # file: config/initializers/custom.rb
+    require 'my_custom_class'
+which will force my_custom_class to be loaded when the worker starts.
 
 == Sending emails with attachments ==
 According to the official Rails guides http://guides.rubyonrails.org/action_mailer_basics.html#adding-attachments, the mail gem will automatically guess the mime_type and set the encoding for emails with attachments. This does not work when the email is delivered asynchronously using delayed_job, and the email will be sent without the attachments.
