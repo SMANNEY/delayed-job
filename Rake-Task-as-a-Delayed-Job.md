@@ -1,4 +1,4 @@
-Here's an example how to trigger rake tasks with delayed_job. Create the following file and require it from the _application.rb_ or _environment.rb_
+Here's an example how to trigger rake tasks with delayed\_job. Create the following file and require it from the _application.rb_ or _environment.rb_
     
     # lib/delayed_rake.rb
     class DelayedRake < Struct.new(:task, :options)
