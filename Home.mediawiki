@@ -3,6 +3,7 @@ The delayed_job README file is a good first source of infos.
 See also :
 * [[delayed job command details]]
 * [[Common problems]]
+* [[Rake Task as a Delayed Job]]
 
 ===Proposals===
 
