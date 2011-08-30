@@ -1,4 +1,4 @@
-== nothing happens ==
+== Nothing Happens ==
 
 # If delayed_job appears to start but the process isn't running, check that  <code>log/delayed_job.log</code>  is writeable.
 # Does your database includes the "delayed_job" table ? If not, go through installation instructions again.
@@ -44,3 +44,12 @@ which will force my_custom_class to be loaded when the worker starts.
 According to the official Rails guides http://guides.rubyonrails.org/action_mailer_basics.html#adding-attachments, the mail gem will automatically guess the mime_type and set the encoding for emails with attachments. This does not work when the email is delivered asynchronously using delayed_job, and the email will be sent without the attachments.
 
 To fix this, remember to add this line to your mailer: content_type "multipart/mixed"
+
+== Can't figure out how to start in production ==
+
+Try:
+    RAILS_ENV=production script/delayed_job start
+
+More info:
+https://github.com/collectiveidea/delayed_job/issues/7
+ 
