@@ -19,7 +19,7 @@ delayed_job comes with Capistrano recipes to start the script/delayed_job worker
 
 If you have one or more servers just for delayed job, you can have your workers run just on that server like so. If you do not set `:delayed_job_server_role`, it will default to `:app`.
 
-    role :delayed_job, delayed_job.example.com
+    role :delayed_job, 'delayed_job.example.com'
     set :delayed_job_server_role, :delayed_job
 
 ### Hook into Capistrano to start, stop and restart  
