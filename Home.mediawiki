@@ -1,4 +1,4 @@
-The delayed_job README file is a good first source of infos.
+The delayed_job README file is a good first source for information.
 
 See also :
 * [[delayed job command details]]
