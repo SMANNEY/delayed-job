@@ -29,3 +29,5 @@ Global hooks have the same names as the callback methods on the job class (befor
 (Stephen V.T.) Implement named queues and allow global hooks to be applied to the queue. Then this would allow 3 levels of hooks: Individual job hooks, queue hooks and global hooks (applies to all queues).
 
 (John H.) Want
+
+(Filipe Giusti) I would gladly implement it if this proposal is accepted.
