@@ -1,3 +1,28 @@
+h2. 3.0.0 - 2011-12-30
+* New: Named queues
+* New: Job/Worker lifecycle callbacks
+* Change: Active Record backend support is provided by a separate gem
+* Change: Enqueue hook is called before jobs are saved so that they may be modified
+* Fix problem deserializing models that use a custom primary key column
+* Fix deserializing AR models when the object isn't in the default scope
+* Fix hooks not getting called when delay_jobs is false
+
+h2. 2.1.4 - 2011-02-11
+* Working around issues when psych is loaded, fixes issues with bundler 1.0.10 and Rails 3.0.4
+* Added -p/--prefix option to help differentiate multiple delayed job workers on the same host.
+
+h2. 2.1.3 - 2011-01-20
+* Revert worker contention fix due to regressions
+* Added Delayed::Worker.delay_jobs flag to support running jobs immediately
+
+h2. 2.1.2 - 2010-12-01
+* Remove contention between multiple workers by performing an update to lock a job before fetching it
+* Job payloads may implement #max_attempts to control how many times it should be retried
+* Fix for loading ActionMailer extension
+* Added 'delayed_job_server_role' Capistrano variable to allow delayed_job to run on its own worker server
+    set :delayed_job_server_role, :worker
+* Fix `rake jobs:work` so it outputs to the console
+
 h2. 2.1.1 - 2010-11-14
 * Fix issue with worker name not getting properly set when locking a job
 * Fixes for YAML serialization
