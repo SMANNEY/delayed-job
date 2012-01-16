@@ -33,6 +33,9 @@ See the difference ? The second one happens when you use the 'thin' server inste
 
 It can also happen when using the standard Passenger/RVM setup_load_paths.rb as detailed on the RVM setup pages: https://rvm.beginrescueend.com/integration/passenger/ To solve this, simply delete that file.
 
+It can also happen if you're running in debug mode. For example, I'm using RubyMine for development. When running Webrick via this IDE and using RubyMines "Debug" command, it fails. If instead (via RubyMine) you use the "Run" command, it works fine. Obviously some conflict happening...
+
+
 == jobs are silently removed from the database ==
 
 If the delayed_job worker cannot process the YAML code in the 'handler' field, it will silently remove the job from the job table.  One common cause is that the YAML references a class not known to the worker.  If this is the case, you can add 
