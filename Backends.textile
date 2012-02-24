@@ -4,7 +4,7 @@ delayed_job allows you to use whatever data store you want for the job queue. He
 * "DataMapper":https://github.com/collectiveidea/delayed_job_data_mapper
 * "Mongoid":https://github.com/collectiveidea/delayed_job_mongoid
 * "MongoMapper":https://github.com/andrewtimberlake/delayed_job_mongo_mapper
-* "MongoMapper (DJ 3.0+, MongoMapper 0.11.0+)":https://github.com/thisduck/delayed_job_mongo_mapper
+* "MongoMapper":https://github.com/thisduck/delayed_job_mongo_mapper (DJ 3.0+, MongoMapper 0.11.0+)
 * "Redis":https://github.com/Viximo/delayed_job_redis (DJ 3.0+, experimental)
 
 h2. Implementing a new backend
