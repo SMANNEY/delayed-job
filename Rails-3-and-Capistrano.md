@@ -32,3 +32,7 @@ If you have one or more servers just for delayed job, you can have your workers 
     # define a Capistrano variable delayed_job_args:
     #
     #   set :delayed_job_args, "-n 2"
+
+### Issues
+
+Note: You may need to do more due to unresolved issues such as https://github.com/collectiveidea/delayed_job/issues/3
