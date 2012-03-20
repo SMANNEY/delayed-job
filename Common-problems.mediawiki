@@ -55,4 +55,10 @@ Try:
 
 More info:
 https://github.com/collectiveidea/delayed_job/issues/7
- 
+
+== DJ doesn't deserialize an unsaved ActiveRecord model ==
+DJ isn't intended to work with unsaved ActiveRecord models. 
+
+Possible solutions:
+* Save the model before using it in a job 
+* If you need access to temporary data that isn't persisted with the model, create a job class that takes the attributes as its data. As part of the job's perform method, do whatever task you need to do and then save the model.
