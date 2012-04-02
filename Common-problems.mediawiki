@@ -38,7 +38,9 @@ It can also happen if you're running in debug mode. For example, I'm using RubyM
 
 == jobs are silently removed from the database ==
 
-If the delayed_job worker cannot process the YAML code in the 'handler' field, it will silently remove the job from the job table.  One common cause is that the YAML references a class not known to the worker.  If this is the case, you can add 
+If the delayed_job worker cannot process the YAML code in the 'handler' field, it will permanently fail the job and, by default, remove the job from the job table. Make sure to set Delayed::Worker.destroy_failed_jobs = false so that the job stays in the table and retains the error.
+
+One common cause of deserialization errors is that the YAML references a class not known to the worker.  If this is the case, you can add 
     # file: config/initializers/custom.rb
     require 'my_custom_class'
 which will force my_custom_class to be loaded when the worker starts.
