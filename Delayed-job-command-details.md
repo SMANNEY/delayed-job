@@ -1,6 +1,6 @@
 Here is the command line detailed help :
 
-    Usage: script/delayed_jobs [options] start|stop|restart|run
+    Usage: script/delayed_job [options] start|stop|restart|run
      -h, --help : Show this message
         The -e/--environment option has been deprecated and has no effect.
         Use RAILS_ENV and see http://github.com/collectiveidea/delayed_job/issues/#issue/7
