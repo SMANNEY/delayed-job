@@ -2,6 +2,6 @@
 
 This is an addon for delayed_job designed to be used when you're using Heroku as a host and have the need to do background work with delayed job but you don't want to leave the workers running all the time as it costs money.
 
-## [DJ Mon](http://portfolio.akshay.cc/dj_mon/)
+## [DJ Mon](http://akshayrawat.github.com/dj_mon)
 
 A Rails engine based frontend for Delayed Job.
