@@ -4,6 +4,7 @@ See also :
 * [[delayed job command details]]
 * [[Common problems]]
 * [[Rake Task as a Delayed Job]]
+* [[Ecosystem]]
 
 ===Proposals===
 
