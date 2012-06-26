@@ -2,6 +2,7 @@ delayed_job allows you to use whatever data store you want for the job queue. He
 
 * "ActiveRecord":https://github.com/collectiveidea/delayed_job_active_record (DJ 3.0+)
 * "DataMapper":https://github.com/collectiveidea/delayed_job_data_mapper
+* "IronMQ":https://github.com/thousandsofthem/delayed_job_ironmq
 * "Mongoid":https://github.com/collectiveidea/delayed_job_mongoid
 * "MongoMapper":https://github.com/andrewtimberlake/delayed_job_mongo_mapper
 * "MongoMapper":https://github.com/thisduck/delayed_job_mongo_mapper (DJ 3.0+, MongoMapper 0.11.0+)
