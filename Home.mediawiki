@@ -6,6 +6,10 @@ See also :
 * [[Rake Task as a Delayed Job]]
 * [[Ecosystem]]
 
+===Monitoring UI===
+* [https://github.com/ejschmitt/delayed_job_web Delayed Job Web]
+* [https://github.com/akshayrawat/dj_mon DJ Mon]
+
 ===Proposals===
 
 * [[auto scaling]]
