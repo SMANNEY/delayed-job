@@ -35,6 +35,6 @@ If you have one or more servers just for delayed job, you can have your workers 
 
 ### Issues
 
-If you are getting an error starting delayed_job in capistrano make sure you have "gem 'daemons'" in your Gemfile.
+If you are getting an error starting delayed_job in capistrano make sure you have `gem 'daemons'` in your Gemfile.
 
 Note: You may need to do more due to unresolved issues such as https://github.com/collectiveidea/delayed_job/issues/3
