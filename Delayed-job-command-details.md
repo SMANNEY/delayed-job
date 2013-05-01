@@ -19,4 +19,3 @@ Example :
     RAILS_ENV=production script/delayed_job -n 2 start
     RAILS_ENV=production script/delayed_job stop
 
-(more examples to come)
