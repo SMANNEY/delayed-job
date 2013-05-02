@@ -4,7 +4,7 @@
 # Does your database include the <code>delayed_job</code> table ? If not, go through installation instructions again.
 # Start your app with no workers and check if jobs are added in the database. If not, see "No jobs are added in the database"
 # If jobs are present, then launch manually one worker : <code>rake jobs:work</code>. Jobs should be processed and disappear from the database.
-## If jobs are still here, do they show an error ? If yes, see "jobs show an error".
+## If jobs are still here, do they show an error?
 ## If jobs are no longer in the database, see log/delayed_job
 ## If jobs have been removed from the database with no reported error, see "jobs are silently removed from the database"
 
@@ -13,28 +13,6 @@ Assuming the delayed_job table is here, try to inspect the logs (log/developemen
  ActiveRecord::Base.send(:attr_accessible, :priority)
  ActiveRecord::Base.send(:attr_accessible, :payload_object)
 Just like you probably did for the sessions, cf. http://railsforum.com/viewtopic.php?id=32634
-
-== jobs show an error ==
-=== undefined method 'xxx' for class... ===
-First just check if the given class has the method (never know !)
-Then, look closely at the 'handler' field of the job. It should be something like that (action mailer example)
- --- !ruby/struct:Delayed::PerformableMailer 
- object: !ruby/class TestMailer
- method_name: :test_email
- args: 
- - xxx@gmail.com
-And NOT like that :
- --- !ruby/struct:Delayed::PerformableMailer 
- object: !ruby/object:Class TestMailer
- method_name: :test_email
- args: 
- - xxx@gmail.com
-See the difference ? The second one happens when you use the 'thin' server instead of the classic mongrel ('rails server'). I don't know why. For now, the solution is to use 'rails server' instead of 'thin'.
-
-It can also happen when using the standard Passenger/RVM setup_load_paths.rb as detailed on the RVM setup pages: https://rvm.beginrescueend.com/integration/passenger/ To solve this, simply delete that file.
-
-It can also happen if you're running in debug mode. For example, I'm using RubyMine for development. When running Webrick via this IDE and using RubyMines "Debug" command, it fails. If instead (via RubyMine) you use the "Run" command, it works fine. Obviously some conflict happening...
-
 
 == jobs are silently removed from the database ==
 
