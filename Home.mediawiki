@@ -5,8 +5,8 @@ See also :
 * [[Common problems]]
 * [[Rake Task as a Delayed Job]]
 * [[Ecosystem]]
+* [[Delayed-Job-tasks-for-Capistrano-3]]
 
 ===Monitoring UI===
 * [https://github.com/ejschmitt/delayed_job_web Delayed Job Web]
 * [https://github.com/akshayrawat/dj_mon DJ Mon] - Supports Mongoid and ActiveRecord. Also has an iPhone app.
-
