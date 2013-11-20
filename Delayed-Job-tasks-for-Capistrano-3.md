@@ -2,7 +2,7 @@ Capistrano 3 has a different DSL for tasks. You won't be able to incorporate DJ 
 
 Instead, for a Rails project, save the following in lib/capistrano/tasks as delayed_job.cap.
 
-````
+```ruby
 namespace :delayed_job do
  
   def args
@@ -47,11 +47,11 @@ namespace :delayed_job do
   end
  
 end
-````
+```
 
 You can still use these configuration options if you wish in your deploy.rb:
 
-````
+```ruby
 set :delayed_job_server_role, :worker
 set :delayed_job_args, "-n 2"
-````
+```
