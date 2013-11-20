@@ -1,4 +1,4 @@
-Capistrano 3 has a different DSL for tasks. You won't be able to incorporate DJ tasks via `require 'delayed/recipes' in your deploy.rb anymore, so don't try to adding it to your new Capfile.
+Capistrano 3 has a different DSL for tasks. You won't be able to incorporate DJ tasks via `require 'delayed/recipes'` in your `deploy.rb` anymore, so don't try to adding it to your new Capfile.
 
 Instead, for a Rails project, save the following in `lib/capistrano/tasks` as `delayed_job.cap`.
 
