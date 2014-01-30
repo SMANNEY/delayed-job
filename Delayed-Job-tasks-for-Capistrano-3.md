@@ -49,6 +49,8 @@ namespace :delayed_job do
 end
 ```
 
+**Rails 4:** *replace script/delayed_job with bin/delayed_job*
+
 You can still use these configuration options if you wish in your deploy.rb:
 
 ```ruby
