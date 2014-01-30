@@ -57,3 +57,14 @@ You can still use these configuration options if you wish in your deploy.rb:
 set :delayed_job_server_role, :worker
 set :delayed_job_args, "-n 2"
 ```
+
+To have delayed_job restart every deploy, add the following to your deploy.rb:
+
+```ruby
+after 'deploy:publishing', 'deploy:restart'                                     
+namespace :deploy do                                                            
+  task :restart do                                                                                                               
+    invoke 'delayed_job:restart'                                                
+  end                                                                           
+end
+```
