@@ -7,7 +7,8 @@
 ## If jobs are still here, do they show an error?
 ## If jobs are no longer in the database, see log/delayed_job
 ## If jobs have been removed from the database with no reported error, see "jobs are silently removed from the database"
-
+# is your job's serialised error message too big to fit into last_error? This will crash the background task
+ 
 == No jobs are added in the database ==
 Assuming the delayed_job table is here, try to inspect the logs (log/developement.log). Do you use protection against mass assignment ? If yes, you should relax the rules for two fields :
  ActiveRecord::Base.send(:attr_accessible, :priority)
