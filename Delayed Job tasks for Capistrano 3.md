@@ -51,6 +51,8 @@ end
 
 **Rails 4:** *replace script/delayed_job with bin/delayed_job*
 
+**Note:** According to the [README](https://github.com/collectiveidea/delayed_job#running-jobs), you should also ensure you have add `gem 'daemons'` to your Gemfile.
+
 Ensure you have a `shared/tmp/pids` folder.
 
 ```ruby
