@@ -51,7 +51,7 @@ end
 
 **Rails 4:** *replace script/delayed_job with bin/delayed_job*
 
-Ensure you have a `shared/pids` folder.
+Ensure you have a `shared/tmp/pids` folder.
 
 ```ruby
 set :linked_dirs, %w{tmp/pids}
