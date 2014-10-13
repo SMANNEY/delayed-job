@@ -62,7 +62,7 @@ set :linked_dirs, %w{tmp/pids}
 You can still use these configuration options if you wish in your deploy.rb:
 
 ```ruby
-set :delayed_job_server_role, :worker
+set :delayed_job_server_rails, :worker
 set :delayed_job_args, "-n 2"
 ```
 
