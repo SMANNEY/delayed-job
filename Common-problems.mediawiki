@@ -1,7 +1,12 @@
 == Nothing Happens ==
 
-# If delayed_job appears to start but the process isn't running, check that  <code>log/delayed_job.log</code>  is writeable.
-# Does your database include the <code>delayed_job</code> table ? If not, go through installation instructions again.
+# If delayed_job appears to start but the process isn't running
+## check that <code>log/delayed_job.log</code> is writeable or wherever you are writing logs
+## check that <code>tmp/pids/</code> exists and is writable, you should see a file <code>tmp/pids/delayed_job.pid</code> when the process is running
+## try <code>bin/delayed_job run</code> and see if any errors are shown, this does not fork a new process
+## specify your rails environment, e.g. <code>RAILS_ENV=production bin/delayed_job</code>
+## try running as root to rule out permission problems
+# Does your database include the <code>delayed_job</code> table? If not, go through installation instructions again.
 # Start your app with no workers and check if jobs are added in the database. If not, see "No jobs are added in the database"
 # If jobs are present, then launch manually one worker : <code>rake jobs:work</code>. Jobs should be processed and disappear from the database.
 ## If jobs are still here, do they show an error?
