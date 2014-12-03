@@ -39,6 +39,9 @@ To fix this, remember to add this line to your mailer: content_type "multipart/m
 Try:
     RAILS_ENV=production script/delayed_job start
 
+Or for Rails 4:
+    RAILS_ENV=production bin/delayed_job start
+
 More info:
 https://github.com/collectiveidea/delayed_job/issues/7
 
