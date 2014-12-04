@@ -10,4 +10,4 @@ See also :
 ===Monitoring UI===
 * [https://github.com/ejschmitt/delayed_job_web Delayed Job Web]
 * [https://github.com/akshayrawat/dj_mon DJ Mon] - Supports Mongoid and ActiveRecord. Also has an iPhone app.
-* [https://github.com/thebestday/delayed-web] - Delayed::Web for Delayed::Job
+* [https://github.com/thebestday/delayed-web Delayed::Web for Delayed::Job]
