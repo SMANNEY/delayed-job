@@ -76,3 +76,5 @@ namespace :deploy do
   end
 end
 ```
+
+You can also use this gem [capistrano3-delayed-job](https://github.com/platanus/capistrano3-delayed-job), this way we won't need to repeat this code in every project that use delayed jobs.
