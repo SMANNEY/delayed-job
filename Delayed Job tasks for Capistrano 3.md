@@ -1,3 +1,7 @@
+Start by taking a look at this gem [capistrano3-delayed-job](https://github.com/platanus/capistrano3-delayed-job), this way we won't need to repeat this code in every project that use delayed jobs.
+
+### If you don't want to use a gem
+
 Capistrano 3 has a different DSL for tasks. You won't be able to incorporate DJ tasks via `require 'delayed/recipes'` in your `deploy.rb` anymore, so don't try to adding it to your new `Capfile`.
 
 Instead, for a Rails project, save the following in `lib/capistrano/tasks` as `delayed_job.rake`.
@@ -76,5 +80,3 @@ namespace :deploy do
   end
 end
 ```
-
-You can also use this gem [capistrano3-delayed-job](https://github.com/platanus/capistrano3-delayed-job), this way we won't need to repeat this code in every project that use delayed jobs.
