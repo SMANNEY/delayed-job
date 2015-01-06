@@ -1,4 +1,4 @@
-Start by taking a look at this gem [capistrano3-delayed-job](https://github.com/platanus/capistrano3-delayed-job), this way we won't need to repeat this code in every project that use delayed jobs.
+Start by taking a look at this gem [capistrano3-delayed-job](https://github.com/platanus/capistrano3-delayed-job), this way we won't need to repeat this code in every project that uses delayed jobs.
 
 ### If you don't want to use a gem
 
