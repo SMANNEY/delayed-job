@@ -22,7 +22,7 @@ namespace :delayed_job do
     on roles(delayed_job_roles) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          execute :bundle, :exec, :'script/delayed_job', :stop
+          execute :bundle, :exec, :'bin/delayed_job', :stop
         end
       end
     end
@@ -33,7 +33,7 @@ namespace :delayed_job do
     on roles(delayed_job_roles) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          execute :bundle, :exec, :'script/delayed_job', args, :start
+          execute :bundle, :exec, :'bin/delayed_job', args, :start
         end
       end
     end
@@ -44,7 +44,7 @@ namespace :delayed_job do
     on roles(delayed_job_roles) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          execute :bundle, :exec, :'script/delayed_job', args, :restart
+          execute :bundle, :exec, :'bin/delayed_job', args, :restart
         end
       end
     end
@@ -53,7 +53,7 @@ namespace :delayed_job do
 end
 ```
 
-**Rails 4:** *replace script/delayed_job with bin/delayed_job*
+**Rails 3:** *replace bin/delayed_job with script/delayed_job*
 
 **Note:** According to the [README](https://github.com/collectiveidea/delayed_job#running-jobs), you should also ensure you have add `gem 'daemons'` to your Gemfile.
 
